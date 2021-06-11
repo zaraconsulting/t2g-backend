@@ -8,7 +8,7 @@ from app.repo.available_videos.Available_videos import Available_Videos
 
 
 @available_videos.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /available_videos/
@@ -17,7 +17,7 @@ def index():
 
 
 @available_videos.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_video(id):
     """
     [GET] /available_videos/<id>
@@ -26,7 +26,7 @@ def get_video(id):
 
 
 @available_videos.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_video():
     """
     [POST] /available_videos/
@@ -39,7 +39,7 @@ def create_video():
 
 
 @available_videos.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_video(id):
     """
     [PUT] /available_videos/
@@ -54,7 +54,7 @@ def edit_video(id):
 
 
 @available_videos.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_video(id):
     """
     [DELETE] /available_videos/

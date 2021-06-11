@@ -8,7 +8,7 @@ from app.repo.positions.Position import Position
 
 
 @positions.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /positions/
@@ -17,7 +17,7 @@ def index():
 
 
 @positions.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_position(id):
     """
     [GET] /positions/<id>
@@ -26,7 +26,7 @@ def get_position(id):
 
 
 @positions.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_position():
     """
     [POST] /positions/
@@ -39,7 +39,7 @@ def create_position():
 
 
 @positions.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_position(id):
     """
     [PUT] /positions/
@@ -54,7 +54,7 @@ def edit_position(id):
 
 
 @positions.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_position(id):
     """
     [DELETE] /positons/

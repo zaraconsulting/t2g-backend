@@ -8,7 +8,7 @@ from app.blueprints.api.auth.auth import token_auth
 
 
 @postings.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /postings/
@@ -17,7 +17,7 @@ def index():
 
 
 @postings.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_posting(id):
     """
     [GET] /postings/<id>
@@ -26,7 +26,7 @@ def get_posting(id):
 
 
 @postings.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_posting():
     """
     [POST] /postings/
@@ -39,7 +39,7 @@ def create_posting():
 
 
 @postings.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_posting(id):
     """
     [PUT] /postings/
@@ -54,7 +54,7 @@ def edit_posting(id):
 
 
 @postings.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_posting(id):
     """
     [DELETE] /postings/

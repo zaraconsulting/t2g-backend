@@ -8,7 +8,7 @@ from app.repo.sports.Sport import Sport
 
 
 @sports.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /sports/
@@ -17,7 +17,7 @@ def index():
 
 
 @sports.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_sport(id):
     """
     [GET] /sports/<id>
@@ -26,7 +26,7 @@ def get_sport(id):
 
 
 @sports.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_sport():
     """
     [POST] /players/
@@ -39,7 +39,7 @@ def create_sport():
 
 
 @sports.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_sport(id):
     """
     [PUT] /sports/
@@ -54,7 +54,7 @@ def edit_sport(id):
 
 
 @sports.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_sport(id):
     """
     [DELETE] /sports/

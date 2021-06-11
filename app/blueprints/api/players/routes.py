@@ -9,7 +9,7 @@ from app.repo.players.Player import Player
 
 
 @players.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /players/
@@ -18,7 +18,7 @@ def index():
 
 
 @players.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_player(id):
     """
     [GET] /players/<id>
@@ -27,7 +27,7 @@ def get_player(id):
 
 
 @players.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_player():
     """
     [POST] /players/
@@ -40,7 +40,7 @@ def create_player():
 
 
 @players.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_player(id):
     """
     [PUT] /players/
@@ -55,7 +55,7 @@ def edit_player(id):
 
 
 @players.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_player(id):
     """
     [DELETE] /players/

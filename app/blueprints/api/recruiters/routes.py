@@ -8,7 +8,7 @@ from app.repo.recruiters.Recruiter import Recruiter
 
 
 @recruiters.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /recruiters/
@@ -17,7 +17,7 @@ def index():
 
 
 @recruiters.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_recruiter(id):
     """
     [GET] /recruiters/<id>
@@ -26,7 +26,7 @@ def get_recruiter(id):
 
 
 @recruiters.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_recruiter():
     """
     [POST] /recruiters/
@@ -39,7 +39,7 @@ def create_recruiter():
 
 
 @recruiters.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_recruiter(id):
     """
     [PUT] /recruiters/
@@ -54,7 +54,7 @@ def edit_recruiter(id):
 
 
 @recruiters.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_recruiterx(id):
     """
     [DELETE] /recruiters/

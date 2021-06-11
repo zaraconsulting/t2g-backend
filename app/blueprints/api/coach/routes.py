@@ -7,7 +7,7 @@ from datetime import datetime as dt
 from app.repo.coaches.Coach import Coach
 
 @coaches.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /coaches/
@@ -15,7 +15,7 @@ def index():
     return jsonify([c.to_dict() for c in Coach.query.all()])
 
 @coaches.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_coach(id):
     """
     [GET] /coaches/<id>
@@ -23,7 +23,7 @@ def get_coach(id):
     return jsonify(Coach.query.get(id).to_dict())
 
 @coaches.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_coach():
     """
     [POST] /coaches/
@@ -36,7 +36,7 @@ def create_coach():
 
 
 @coaches.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_coach(id):
     """
     [PUT] /coaches/
@@ -51,7 +51,7 @@ def edit_coach(id):
 
 
 @coaches.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_coach(id):
     """
     [DELETE] /coaches/

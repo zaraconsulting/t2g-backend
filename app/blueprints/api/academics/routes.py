@@ -8,7 +8,7 @@ from app.repo.academics.Academics import Academics
 
 
 @academics.route('/', methods=['GET'])
-@token_auth.login_required
+# @token_auth.login_required
 def index():
     """
     [GET] /academics/
@@ -17,7 +17,7 @@ def index():
 
 
 @academics.route('/<int:id>')
-@token_auth.login_required
+# @token_auth.login_required
 def get_academics(id):
     """
     [GET] /academics/<id>
@@ -26,7 +26,7 @@ def get_academics(id):
 
 
 @academics.route('/create', methods=['POST'])
-@token_auth.login_required
+# @token_auth.login_required
 def create_academics():
     """
     [POST] /academics/
@@ -39,7 +39,7 @@ def create_academics():
 
 
 @academics.route('/edit/<int:id>', methods=['PUT'])
-@token_auth.login_required
+# @token_auth.login_required
 def edit_academics(id):
     """
     [PUT] /academics/
@@ -54,7 +54,7 @@ def edit_academics(id):
 
 
 @academics.route('/delete/<int:id>', methods=['DELETE'])
-@token_auth.login_required
+# @token_auth.login_required
 def delete_academics(id):
     """
     [DELETE] /academics/
